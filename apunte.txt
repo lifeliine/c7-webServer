@@ -35,3 +35,10 @@ Lo importamos en el index:
 require('dotenv').config(); // es para poner el env como propiedades de nodejs
 
 Para podes acceder a una propiedad de node js usamos process. entonces queda como const port = process.env.PORT;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Usando HEROKU
+
+Creamos el proyecto en la web de heroku, seleccionamos el repo de github que queremos conectar, si habilitamos automatic deploy cada vez que hacemos un push se actualiza heroku
+OBS: en el json tiene que estar habilado el script start para que funcione
