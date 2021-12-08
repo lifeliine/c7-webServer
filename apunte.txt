@@ -1,0 +1,37 @@
+Para usar exprees:
+npm install express para instalarlo
+
+lo llamamos:
+const express = require('express');
+const app = express();
+
+al final especificamos que escuche:
+app.listen(3000)
+
+estructura basica: (se puede con get,post etc) :
+app.get('/', function(req,res) {
+    res.send('Hola mundo!');
+});
+
+ampliacion estructura basica:
+req = request
+res = response
+/ = path(podemos cambiarlo, poner una ruta ej /Usuarios)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+renderizando un html:
+app.use(express.static(__dirname + '/public'));
+
+ampliacion renderizando:
+/public donde esta la carpeta pero con __dirname automatizamos todo el path desde que inicia /home/lifeliine...
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Especificamos el puerto desde un archivo de propiedades:
+npm install dotenv --save
+
+Lo importamos en el index:
+require('dotenv').config(); // es para poner el env como propiedades de nodejs
+
+Para podes acceder a una propiedad de node js usamos process. entonces queda como const port = process.env.PORT;

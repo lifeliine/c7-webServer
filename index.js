@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT; //generalmente se define antes el puerto porque lo decide otra area
 
 app.use(express.static(__dirname + '/public'));
 
@@ -20,5 +21,5 @@ app.post('/',function(req,res) {
 });
 
 app.listen(port, () => {
-    console.log(`Server started - Port ${port}`)
+    console.log(`Server started - Port ${port}`) //asi avisamos que se ejecuta
 });
